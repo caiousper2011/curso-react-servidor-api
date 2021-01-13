@@ -1,0 +1,9 @@
+{
+  "name": "servidor-api",
+  "version": "1.0.0",
+  "description": "API RestFul",
+  "main": "index.js",
+  "repository": "https://github.com/caiousper2011/curso-react-servidor-api",
+  "author": "Caio Barbosa",
+  "license": "MIT"
+}
