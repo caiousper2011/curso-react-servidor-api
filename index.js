@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const PORT = 3000;
 const app = express();
 
-app.use(helmet()).use(cors()).use(bodyParser.json());
+app.use(helmet()).use(cors()).use(bodyParser.json()).disable("x-powered-by");
 
 app.listen(PORT, () => {
   console.log(`servidor online maluco, na porta: ${PORT}`);
