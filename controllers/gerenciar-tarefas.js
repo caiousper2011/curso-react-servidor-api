@@ -1,3 +1,5 @@
+// file deepcode ignore reDOS: <comment the reason here>
+
 const uuid = require("uuid");
 let tarefas = [
   { id: 1, nome: "A Tarefa", concluida: false },
@@ -24,11 +26,11 @@ const listarTarefas = (req, res) => {
 
   if (filtroTarefa) {
     tarefasRetornar = tarefasRetornar.filter(({ nome }) => {
-      const expressaoFiltro = new RegExp(filtroTarefa.toLowerCase());
+      const expressaoFiltro = new RegExp(filtroTarefa, "i");
       return expressaoFiltro.test(nome.toLowerCase());
     });
   }
-  console.log(tarefasRetornar);
+
   if (ordem === "ASC") {
     tarefasRetornar.sort(({ nome: nome1 }, { nome: nome2 }) =>
       nome1.localeCompare(nome2)
